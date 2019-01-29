@@ -7,10 +7,9 @@ class translate:
         self.filePath = self.directory + "/" + file
 
     def openCSV(self):
-        if os.path.exists(self.filePath):
-            file = open(self.filePath, 'r')
-            text = file.read()
-            file.close()
+        if os.path.exists(self.filePath)
+            with open(self.filePath, 'r') as file:
+                text = file.read()        
             return text
         else:
             print("Unable to open %s. File not found" % self.filePath)
